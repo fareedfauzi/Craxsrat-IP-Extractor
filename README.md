@@ -12,9 +12,7 @@ $ cd craxsrat-ip-extractor
 $ python3 craxsrat_ip_extractor.py /path/to/apk/folder
 ```
 
-## Note
 - I've placed 3 samples in the `apks` folder for testing.
-- Make sure all the samples have the .apk extension to be processed by the script.
 
 ## Expected output
 ```

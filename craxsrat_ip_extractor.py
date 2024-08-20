@@ -58,8 +58,7 @@ def main():
     if not os.path.isdir(apk_folder):
         print('Invalid directory path')
         sys.exit(1)
-    
-    # Collect only unique APK files
+        
     apk_files = glob.glob(os.path.join(apk_folder, '*.apk'))
 
     for apk_file in apk_files:

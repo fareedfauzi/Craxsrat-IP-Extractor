@@ -54,15 +54,16 @@ def main():
     if len(sys.argv) != 2:
         print('Usage: python craxsrat_ip_extractor.py /path/to/apk/folder')
         sys.exit(1)
-    apk_folder = sys.argv[1]
-    if not os.path.isdir(apk_folder):
+    folder_path = sys.argv[1]
+    if not os.path.isdir(folder_path):
         print('Invalid directory path')
         sys.exit(1)
-        
-    apk_files = glob.glob(os.path.join(apk_folder, '*.apk'))
+    
+    # Collect all files in the folder
+    files = glob.glob(os.path.join(folder_path, '*'))
 
-    for apk_file in apk_files:
-        extract_ips_from_apk(apk_file)
+    for file_path in files:
+        extract_ips_from_apk(file_path)
 
 if __name__ == '__main__':
     main()
